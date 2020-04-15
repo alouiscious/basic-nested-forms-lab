@@ -10,8 +10,8 @@ class Recipe < ActiveRecord::Base
   #   title.try(:title)    
   # end
 
-  # def ingredient_attributes=(ingredient)
-  #   self.ingredient = Ingredient.find_or_create_by(name: artist[:name])
-  #   self.ingredient.update(ingredient)    
-  # end
+  def ingredient_attributes=(ingredient_attribute)
+    self.ingredient = Ingredient.find_or_create_by(name: ingredient_attribute)
+    self.ingredient.update(ingredient_attribute)    
+  end
 end
